@@ -33,3 +33,6 @@ alias .='cd ..'
 alias ..='cd ../..'
 alias ...='cd ../../..'
 alias bb='cd -'
+
+# Dotfiles
+alias checkrc='git diff ~/dotfiles/'
