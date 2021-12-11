@@ -7,13 +7,13 @@ warn="(!) "
 fail="(x) "
 conf="(?) "
 
-cd # Starts bash in correct directory
+
 echo ${suc}".bashrc sourced"
-hostname # Reminder of where I am
 
 # Source script-specific bash config 
 if [ -f ~/.bscripts ]; then
 	source ~/.bscripts
+	echo ${suc}".bscripts sourced"
 else
 	echo ${fail}"~/.bscripts doesn't exist!"
 fi
@@ -21,10 +21,20 @@ fi
 # Source aliases file
 if [ -f ~/.bash_aliases ]; then
 	source ~/.bash_aliases
+	echo ${suc}".bash_aliases sourced"
 else
 	echo ${fail}"~/.bash_aliases doesn't exist!"
 fi
 
+if [ -f ~/dotfiles/bscripts ]; then
+	source ~/dotfiles/inputrc
+	echo ${suc}"inputrc sourced"
+else
+	echo ${fail}"~/inputrc doesn't exist!"
+fi
+
+
+echo -n On:\ ;hostname # Reminder of where I am
 
 # Code
 export PROJ=~/code/proj/

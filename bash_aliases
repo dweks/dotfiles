@@ -19,7 +19,7 @@ alias tlabs='ssh blak7@cs163lab.cs.pdx.edu'
 alias psu='ssh blak7@ada.cs.pdx.edu'
 
 # Actions
-alias clean='rm *.swp *.swo -v' # Clean Swap files
+alias sclean='rm *.swp *.swo -v' # Clean Swap files
 alias leak='clear && valgrind --leak-check=full ./a.out' # Run compiled program with valgrind
 alias cmp='g++ -Wall -g *.cpp'
 
@@ -29,7 +29,7 @@ alias la='ls -cAX1F --color=always'
 alias ll='ls -cAXoF --color=always'
 
 # Navigation
-alias up='cd ..'
-alias up2='cd ../..'
-alias up3='cd ../../..'
+alias .='cd ..'
+alias ..='cd ../..'
+alias ...='cd ../../..'
 alias bb='cd -'
