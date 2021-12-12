@@ -51,7 +51,7 @@ export BSCRIPT=~/.bscripts
 
 # Color and format
 export PS1="\e[0;33m▓\e[m\e[1;34m \w \e[m\e[1;33m>\e[m " # Prompt customization
-export LS_COLORS=$LS_COLORS:'di=34:*.cpp=32:*.h=33:*.c=31:*.o=35:' # LS colors
+export LS_COLORS=$LS_COLORS:'di=1;34:*.cpp=32:*.h=33:*.c=31:*.o=35:' # LS colors
 #[DEFAULT do not delete] PS1='[\u@\h \W]\$ '
 
 # Environmental variables

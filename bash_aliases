@@ -24,8 +24,9 @@ alias leak='clear && valgrind --leak-check=full ./a.out' # Run compiled program 
 alias cmp='g++ -Wall -g *.cpp'
 
 # List mods
-alias ls='ls -cX1F --color=always'
-alias la='ls -cAX1F --color=always'
+alias ls='ls -cXF --color=always'
+alias ls1='ls -cX1F --color=always'
+alias la='ls -cAXF --color=always'
 alias ll='ls -cAXoF --color=always'
 
 # Navigation
