@@ -33,3 +33,7 @@ alias .='cd ..'
 alias ..='cd ../..'
 alias ...='cd ../../..'
 alias bb='cd -'
+
+# Dotfiles
+alias checkrc='git -C ~/dotfiles/ show-branch *main'
+alias updaterc='git -C ~/dotfiles/ pull'
