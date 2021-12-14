@@ -20,6 +20,56 @@ set so=5 "keeps cursor near center of window (lower numbers give normal buffer)
 nnoremap <C-h> gT
 nnoremap <C-l> gt
 
+" Adds blank line below/above (normal mode)
+nnoremap <C-j> mno<Esc>`n
+nnoremap <C-k> mnO<Esc>`n
+
+" Save with Ctrl+s
+nnoremap <C-s> :wa<CR>
+
+" easier access to recent commands
+nnoremap <C-\> q:
+
+" Delete lines above/below
+nnoremap <C-i> mmkdd`m 
+nnoremap <C-n> mmjdd`m 
+
+" swap next line with current
+nnoremap df mnjddk<S-p>`n
+nnoremap ds mnkddp`n
+
+" add semicolon to end of line
+nnoremap <C-;> mm<Esc>$a;`m
+
+" insert bracket pairs
+inoremap ( ()<Esc>i
+inoremap (( (<Esc>a
+inoremap () ()<Esc>a
+inoremap " ""<Esc>i
+inoremap "" "<Esc>a
+inoremap [ []<Esc>i
+inoremap [[ [<Esc>a
+" maybe use this? inoremap < <><Esc>i
+" maybe use this? inoremap << <<Esc>i
+inoremap { {}<Esc>i
+inoremap {{ {<Esc>a
+
+" Make curly block
+imap {{{ <Esc>$o{<CR><Esc>ko<Tab>
+
+" complement to insert bracket pairs - moves out of bracket
+inoremap <C-l> <Esc>la
+inoremap <C-h> <Esc>i
+
+" swap next line with current
+nnoremap ds mmjddk<S-p>`m
+
+" add semicolon to end of line (does nto work): nnoremap <C-;> mn<S-4>a;<Esc>`n
+
+
+
+
+
 " Syntax
 hi Constant ctermfg=169
 hi Comment ctermfg=242
