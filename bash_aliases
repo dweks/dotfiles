@@ -8,10 +8,14 @@ alias set='proj && cd set-build' #takes me directly to set-builder
 alias vrc='vim $VRC'
 
 # Bash
-alias allbash='vim -p $BRC $ABRC $BSCRIPT'
+alias allbash='vim -p $BRC $ABRC $BSCRIPTS $BCOLORS $SOURCER $INPUTRC'
 alias brc='vim $BRC'
 alias abrc='vim $ABRC'
-alias sbrc='vim $ABRC'
+alias sourcer='vim $ABRC'
+alias bscripts='source $BRC'
+alias bcolors='source $BRC'
+alias inputrc='source $INPUTRC'
+
 alias scb='source $BRC'
 
 # Server jumps
@@ -36,6 +40,5 @@ alias ...='cd ../../..'
 alias bb='cd -'
 
 # Dotfiles
-alias checkrc='git -C ~/dotfiles/ show-branch *main'
 alias updaterc='git -C ~/dotfiles/ pull'
 #ADDITION

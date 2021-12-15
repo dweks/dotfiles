@@ -35,11 +35,13 @@ nnoremap <C-i> mmkdd`m
 nnoremap <C-n> mmjdd`m 
 
 " swap next line with current
-nnoremap df mnjddk<S-p>`n
 nnoremap ds mnkddp`n
 
 " add semicolon to end of line
 nnoremap <C-;> mm<Esc>$a;`m
+
+" wrap in parens
+nnoremap ( ebcw{}<Esc>P
 
 " insert bracket pairs
 inoremap ( ()<Esc>i
