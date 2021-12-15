@@ -33,7 +33,7 @@ export SCRIPTS=~/code/plan
 export VRC=~/.vim/vimrc
 
 # Color and format
-export PS1="${bldgrn}〓\e[m\e[1;34m \w \e[m\e[1;33m>\e[m " # Prompt customization
+export PS1="${bldblk}\H: \w \e[m\n${bldgrn}>> \e[m" # Prompt customization
 export LS_COLORS=$LS_COLORS:'di=1;34:*.cpp=32:*.h=33:*.c=31:*.o=35:' # LS colors
 #[DEFAULT do not delete] PS1='[\u@\h \W]\$ '
 
