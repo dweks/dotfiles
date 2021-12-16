@@ -24,11 +24,8 @@ nnoremap <C-l> gt
 nnoremap <C-j> mno<Esc>`n
 nnoremap <C-k> mnO<Esc>`n
 
-" Save with Ctrl+s
-nnoremap <C-s> :wa<CR>
-
-" easier access to recent commands
-nnoremap <C-\> q:
+" source with Ctrl+s
+nnoremap <C-s> :source $VRC<CR>
 
 " Delete lines above/below
 nnoremap <C-i> mmkdd`m 
@@ -38,10 +35,17 @@ nnoremap <C-n> mmjdd`m
 nnoremap ds mnkddp`n
 
 " add semicolon to end of line
-nnoremap <C-;> mm<Esc>$a;`m
+nnoremap ;; ma$a;<Esc>`a
 
-" wrap in parens
-nnoremap ( ebcw{}<Esc>P
+" remove brackets/quotes
+nnoremap <C-\><C-\> ma%mb%x`bx`a
+nnoremap <C-\>" maf"xF"x`a
+
+" wrap in brackets/quotes
+xnoremap <C-\>( <Esc>`<i(<Esc>`>a)<Esc>
+xnoremap <C-\>{ <Esc>`<i{<Esc>`>a}<Esc>
+xnoremap <C-\>[ <Esc>`<i[<Esc>`>a]<Esc>
+xnoremap <C-\>" <Esc>`<i"<Esc>`>a"<Esc>
 
 " insert bracket pairs
 inoremap ( ()<Esc>i

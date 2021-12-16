@@ -12,9 +12,9 @@ alias allbash='vim -p $BRC $ABRC $BSCRIPTS $BCOLORS $SOURCER $INPUTRC'
 alias brc='vim $BRC'
 alias abrc='vim $ABRC'
 alias sourcer='vim $ABRC'
-alias bscripts='source $BRC'
-alias bcolors='source $BRC'
-alias inputrc='source $INPUTRC'
+alias bscripts='vim $BRC'
+alias bcolors='vim $BRC'
+alias inputrc='vim $INPUTRC'
 
 alias scb='source $BRC'
 

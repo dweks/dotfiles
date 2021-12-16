@@ -29,9 +29,8 @@ export SCRIPTS=~/code/plan
 
 # Vim
 export VRC=~/.vim/vimrc
-
 # Default Environmental variables
-export PS1="${bldblk}\H: \w \e[m\n${bldgrn}>> \e[m" # Prompt customization
+export PS1="${bldblk}\H: \w\n${EE}${bldgrn}>> ${EE}" # Prompt customization
 export LS_COLORS=$LS_COLORS:'di=1;34:*.cpp=32:*.h=33:*.c=31:*.o=35:' # LS colors
 export PATH=${PATH}:/cat/bin # look in the cat bin
 export PATH=${PATH}:/scripts # enable global script execution
