@@ -15,6 +15,7 @@ alias sourcer='vim $ABRC'
 alias bscripts='vim $BRC'
 alias bcolors='vim $BRC'
 alias inputrc='vim $INPUTRC'
+alias showalias='cat $ABRC | less'
 
 alias scb='source $BRC'
 

@@ -17,9 +17,9 @@ export BCOLORS=${DOTFILES}/bcolors.sh
 export INPUTRC=${DOTFILES}/inputrc.sh
 
 # Source master sourcer
-source ${DOTFILES}/sourcer.sh
-if [ ! -f ${DOTFILES}/sourcer.sh ]; then
-	echo ${fail}"${DOTFILES}/sourcer.sh doesn't exist!"
+source ${SOURCER}
+if [ ! -f ${SOURCER} ]; then
+	echo ${fail}"${SOURCER} doesn't exist!"
 fi
 
 # Code
