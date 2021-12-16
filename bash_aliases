@@ -8,7 +8,7 @@ alias set='proj && cd set-build' #takes me directly to set-builder
 alias vrc='vim $VRC'
 
 # Bash
-alias allbash='vim -p $BRC $ABRC $BSCRIPTS $BCOLORS $SOURCER $INPUTRC'
+alias allbash='vim -p $BRC $ABRC $SOURCER $BCOLORS $BSCRIPTS $INPUTRC'
 alias brc='vim $BRC'
 alias abrc='vim $ABRC'
 alias sourcer='vim $ABRC'
@@ -23,7 +23,7 @@ alias tlabs='ssh blak7@cs163lab.cs.pdx.edu'
 alias psu='ssh blak7@ada.cs.pdx.edu'
 
 # Actions
-alias sclean='rm *.swp *.swo -v' # Clean Swap files
+alias rmswp='rm *.swp *.swo -v' # Clean Swap files
 alias leak='clear && valgrind --leak-check=full ./a.out' # Run compiled program with valgrind
 alias cmp='g++ -Wall -g *.cpp'
 
@@ -41,4 +41,3 @@ alias bb='cd -'
 
 # Dotfiles
 alias updaterc='git -C ~/dotfiles/ pull'
-#ADDITION

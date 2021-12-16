@@ -1,7 +1,16 @@
 # psu
+echo -e "\e[0;33mUpdating dotfiles...\e[m"
+updaterc
 export TERM=xterm-256color
 stty -ixon
 
+function testtrap
+{
+	echo testing trap
+	read var
+}
+
+trap testtrap EXIT
 suc="(+) "
 warn="(!) "
 fail="(x) "
@@ -17,9 +26,9 @@ export BCOLORS=${DOTFILES}/bcolors.sh
 export INPUTRC=${DOTFILES}/inputrc.sh
 
 # Source master sourcer
-source ${DOTFILES}/sourcer.sh
-if [ ! -f ${DOTFILES}/sourcer.sh ]; then
-	echo ${fail}"${DOTFILES}/sourcer.sh doesn't exist!"
+source ${SOURCER}
+if [ ! -f ${SOURCER} ]; then
+	echo ${fail}"${SOURCER} doesn't exist!"
 fi
 
 # Code
@@ -30,7 +39,7 @@ export SCRIPTS=~/code/plan
 # Vim
 export VRC=~/.vim/vimrc
 # Default Environmental variables
-export PS1="${bldblk}\H: \w\n${EE}${bldgrn}>> ${EE}" # Prompt customization
+export PS1="${bldblk}\H: \w\n${EEE}${bldgrn}>> ${EEE}" # Prompt customization
 export LS_COLORS=$LS_COLORS:'di=1;34:*.cpp=32:*.h=33:*.c=31:*.o=35:' # LS colors
 export PATH=${PATH}:/cat/bin # look in the cat bin
 export PATH=${PATH}:/scripts # enable global script execution
