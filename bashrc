@@ -1,23 +1,22 @@
 # psu
-echo -e "\e[0;33mUpdating dotfiles...\e[m"
-updaterc
+echo -e "\e[0;33mPulling dotfiles...\e[m"
+git -C ~/dotfiles/ pull
 export TERM=xterm-256color
 stty -ixon
 
+# Something to do when exiting
 function testtrap
 {
 	echo testing trap
-	read var
 }
-
 trap testtrap EXIT
+
 suc="(+) "
 warn="(!) "
 fail="(x) "
 conf="(?) "
 
 # Bash
-export DOTFILES=~/dotfiles
 export BRC=~/.bashrc
 export ABRC=~/.bash_aliases
 export BSCRIPTS=${DOTFILES}/bscripts.sh
