@@ -8,14 +8,19 @@ alias set='proj && cd set-build' #takes me directly to set-builder
 alias vrc='vim $VRC'
 
 # Bash
-alias allbash='vim -p $BRC $ABRC $SOURCER $BCOLORS $BSCRIPTS $INPUTRC'
+alias allbash='vim -p $BRC $ABRC $SOURCER $BFUNCS $BCOLORS $BSCRIPTS $INPUTRC'
 alias brc='vim $BRC'
 alias abrc='vim $ABRC'
 alias sourcer='vim $ABRC'
+
 alias bscripts='vim $BRC'
 alias bcolors='vim $BRC'
 alias inputrc='vim $INPUTRC'
+<<<<<<< HEAD
 alias showalias='cat $ABRC | less'
+=======
+alias bcolors='vim $BFUNCS'
+>>>>>>> c39d81d1310aeb5c17538fd6b6aa4d8d5f704b02
 
 alias scb='source $BRC'
 
@@ -39,5 +44,8 @@ alias .='cd ..'
 alias ..='cd ../..'
 alias ...='cd ../../..'
 alias bb='cd -'
+<<<<<<< HEAD
 
 # Dotfiles
+=======
+>>>>>>> c39d81d1310aeb5c17538fd6b6aa4d8d5f704b02

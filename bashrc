@@ -1,6 +1,7 @@
 export TERM=xterm-256color
 stty -ixon
 
+<<<<<<< HEAD
 echo -e "\e[0;33mUpdating dotfiles...\e[m"
 git -C ~/dotfiles/ pull
 
@@ -16,19 +17,24 @@ warn="(!) "
 fail="(x) "
 conf="(?) "
 
+=======
+>>>>>>> c39d81d1310aeb5c17538fd6b6aa4d8d5f704b02
 # Bash
 export DOTFILES=~/dotfiles
 export BRC=~/.bashrc
 export ABRC=~/.bash_aliases
-export BSCRIPTS=${DOTFILES}/bscripts.sh
 export SOURCER=${DOTFILES}/sourcer.sh
+
+export BSCRIPTS=${DOTFILES}/bscripts.sh
 export BCOLORS=${DOTFILES}/bcolors.sh
+export BFUNCS=${DOTFILES}/bfuncs.sh
 export INPUTRC=${DOTFILES}/inputrc.sh
 
 # Source master sourcer
-source ${SOURCER}
-if [ ! -f ${SOURCER} ]; then
-	echo ${fail}"${SOURCER} doesn't exist!"
+if [ -f ${SOURCER} ]; then
+	source ${SOURCER}
+else
+	echo "${SOURCER} doesn't exist!"
 fi
 
 # Code
@@ -38,6 +44,7 @@ export SCRIPTS=~/code/plan
 
 # Vim
 export VRC=~/.vim/vimrc
+
 # Default Environmental variables
 export PS1="${bldblk}\H: \w\n${EEE}${bldgrn}>> ${EEE}" # Prompt customization
 export LS_COLORS=$LS_COLORS:'di=1;34:*.cpp=32:*.h=33:*.c=31:*.o=35:' # LS colors
