@@ -4,8 +4,9 @@ export QPATH=~/qnotes/
 export QFILE=.q
 export QFULL=$QPATH$QFILE
 
-alias eq='vim $QFULL'
-alias cq='cat -n $QFULL | less'
-alias gq='cd $QPATH && ls'
+alias qedit='vim $QFULL'
+alias qview='cat -n $QFULL | less'
+alias qdir='cd $QPATH && ls'
+alias qlist='ls $QPATH'
 alias eqnot='vim $QSRC'
 

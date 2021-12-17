@@ -4,3 +4,18 @@ function pulldot()
 	git -C ~/dotfiles/ pull
 }
 
+function pushdot()
+{
+	if [ -z $1 ]; then
+		echo "Provide commit message"
+		return
+	fi	
+	COMMIT=$@
+
+	echo -e "\e[0;33mAdding to stage...\e[m"
+	git -C $DOTFILES add .
+	echo -e "\e[0;33mCommitting: \"$COMMIT\" \e[m"
+	git -C $DOTFILES commit -m "$COMMIT"
+	echo -e "\e[0;33mPushing to GitHub...\e[m"
+	git -C $DOTFILES push
+}
