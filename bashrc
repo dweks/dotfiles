@@ -1,24 +1,6 @@
 export TERM=xterm-256color
 stty -ixon
 
-<<<<<<< HEAD
-echo -e "\e[0;33mUpdating dotfiles...\e[m"
-git -C ~/dotfiles/ pull
-
-function testtrap
-{
-	echo testing trap
-	read var
-}
-
-trap testtrap EXIT
-suc="(+) "
-warn="(!) "
-fail="(x) "
-conf="(?) "
-
-=======
->>>>>>> c39d81d1310aeb5c17538fd6b6aa4d8d5f704b02
 # Bash
 export DOTFILES=~/dotfiles
 export BRC=~/.bashrc

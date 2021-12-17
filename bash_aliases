@@ -16,11 +16,7 @@ alias sourcer='vim $ABRC'
 alias bscripts='vim $BRC'
 alias bcolors='vim $BRC'
 alias inputrc='vim $INPUTRC'
-<<<<<<< HEAD
-alias showalias='cat $ABRC | less'
-=======
-alias bcolors='vim $BFUNCS'
->>>>>>> c39d81d1310aeb5c17538fd6b6aa4d8d5f704b02
+alias bfuncs='vim $BFUNCS'
 
 alias scb='source $BRC'
 
@@ -44,8 +40,3 @@ alias .='cd ..'
 alias ..='cd ../..'
 alias ...='cd ../../..'
 alias bb='cd -'
-<<<<<<< HEAD
-
-# Dotfiles
-=======
->>>>>>> c39d81d1310aeb5c17538fd6b6aa4d8d5f704b02
