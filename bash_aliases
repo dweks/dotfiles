@@ -41,4 +41,3 @@ alias ...='cd ../../..'
 alias bb='cd -'
 
 # Dotfiles
-alias updaterc='git -C ~/dotfiles/ pull'

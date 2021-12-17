@@ -1,8 +1,8 @@
-# psu
-echo -e "\e[0;33mUpdating dotfiles...\e[m"
-updaterc
 export TERM=xterm-256color
 stty -ixon
+
+echo -e "\e[0;33mUpdating dotfiles...\e[m"
+git -C ~/dotfiles/ pull
 
 function testtrap
 {
