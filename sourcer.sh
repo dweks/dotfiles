@@ -1,28 +1,35 @@
 # source bash aliases file
-if [ -f ~/.bash_aliases ]; then
-	source ~/.bash_aliases
+if [ -f ${ABRC} ]; then
+	source ${ABRC}
 else
-	echo ${fail}"~/.bash_aliases doesn't exist!"
+	echo "${ABRC} doesn't exist!"
 fi
 
 # source master bash script 
-if [ -f ${DOTFILES}/bscripts.sh ]; then
-	source ${DOTFILES}/bscripts.sh
+if [ -f ${BSCRIPTS} ]; then
+	source ${BSCRIPTS}
 else
-	echo ${fail}"${DOTFILES}/bscripts.sh doesn't exist!"
+	echo "${BSCRIPTS} doesn't exist!"
 fi
 
 # source inputrc
-if [ -f ${DOTFILES}/inputrc.sh ]; then
-	source ${DOTFILES}/inputrc.sh
+if [ -f ${INPUTRC} ]; then
+	source ${INPUTRC}
 else
-	echo ${fail}"${DOTFILES}/inputrc.sh doesn't exist!"
+	echo "${INPUTRC} doesn't exist!"
 fi
 
 # source bash color variables
-if [ -f ${DOTFILES}/bcolors.sh ]; then
-	source ${DOTFILES}/bcolors.sh
+if [ -f ${BCOLORS} ]; then
+	source ${BCOLORS}
 else
-	echo ${fail}"${DOTFILES}/bcolors.sh doesn't exist!"
+	echo "${BCOLORS} doesn't exist!"
+fi
+
+# source bash functions
+if [ -f ${BFUNCS} ]; then
+	source ${BFUNCS}
+else
+	echo "${BFUNCS} doesn't exist!"
 fi
 
