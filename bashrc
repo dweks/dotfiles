@@ -1,16 +1,23 @@
 export TERM=xterm-256color
 stty -ixon
 
-# Bash
-export DOTFILES=~/dotfiles
+echo -e "\e[0;33mbashrc sourced!\e[m"
+
+WHERE=$(hostname)
+MY_HOME='sqDesk'
+MY_PSU='ada.cs.pdx.edu'
+MY_TCSS='quizor1.cs.pdx.edu'
+
+# All servers
+DOTFILES=~/dotfiles
 export BRC=~/.bashrc
 export ABRC=~/.bash_aliases
-export SOURCER=${DOTFILES}/sourcer.sh
+SOURCER=${DOTFILES}/sourcer.sh
 
-export BSCRIPTS=${DOTFILES}/bscripts.sh
-export BCOLORS=${DOTFILES}/bcolors.sh
-export BFUNCS=${DOTFILES}/bfuncs.sh
-export INPUTRC=${DOTFILES}/inputrc.sh
+BSCRIPTS=${DOTFILES}/bscripts.sh
+BCOLORS=${DOTFILES}/bcolors.sh
+BFUNCS=${DOTFILES}/bfuncs.sh
+INPUTRC=${DOTFILES}/inputrc.sh
 
 # Source master sourcer
 if [ -f ${SOURCER} ]; then
@@ -20,9 +27,13 @@ else
 fi
 
 # Code
-export PROJ=~/code/proj
-export PRAC=~/code/prac
-export SCRIPTS=~/code/plan
+if [[ $WHERE == $MY_PSU ]]; then
+	PROJ=~/code/proj
+	PRAC=~/code/prac
+fi
+if [[ $WHERE == $MY_HOME ]]; then
+	SCRIPTS=~/scripts
+fi
 
 # Vim
 export VRC=~/.vim/vimrc
