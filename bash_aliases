@@ -43,3 +43,7 @@ alias .='cd ..'
 alias ..='cd ../..'
 alias ...='cd ../../..'
 alias bb='cd -'
+
+if [[ $WHERE == $MY_TCSS ]]; then
+    alias master='cd /mnt/quizor/materials && ls'
+fi

@@ -3,17 +3,18 @@ stty -ixon
 
 echo -e "\e[0;33mbashrc sourced!\e[m"
 
-WHERE=$(hostname)
+export WHERE=$(hostname)
 MY_HOME='sqDesk'
 MY_PSU='ada.cs.pdx.edu'
 MY_TCSS='quizor1.cs.pdx.edu'
 
 # All servers
 DOTFILES=~/dotfiles
+export VRC=~/.vim/vimrc
 export BRC=~/.bashrc
 export ABRC=~/.bash_aliases
-SOURCER=${DOTFILES}/sourcer.sh
 
+SOURCER=${DOTFILES}/sourcer.sh
 BSCRIPTS=${DOTFILES}/bscripts.sh
 BCOLORS=${DOTFILES}/bcolors.sh
 BFUNCS=${DOTFILES}/bfuncs.sh
@@ -34,9 +35,6 @@ fi
 if [[ $WHERE == $MY_HOME ]]; then
 	SCRIPTS=~/scripts
 fi
-
-# Vim
-export VRC=~/.vim/vimrc
 
 # Default Environmental variables
 export PS1="${bldblk}\H: \w\n${EEE}${bldgrn}>> ${EEE}" # Prompt customization

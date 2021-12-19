@@ -1,11 +1,24 @@
-function pulldot()
-{
+if [[ $WHERE == $MY_TCSS ]]; then
+    function c1() {
+        cd ~/CS162/Lab$@ && ls 
+    }
+    function c2() {
+        cd ~/CS163/Lab$@ && ls
+    }
+    function c3() {
+        cd ~/CS202/Lab$@ && ls
+    }
+    function c4() {
+        cd ~/CS299/$@ && ls
+    }
+fi
+
+function pulldot() {
 	echo -e "\e[0;33mPulling dotfiles...\e[m"
 	git -C ~/dotfiles/ pull
 }
 
-function pushdot()
-{
+function pushdot() {
 	if [ -z $1 ]; then
 		echo -e "\e[1;31mProvide commit message\e[m"
 		return
@@ -22,8 +35,7 @@ function pushdot()
 }
 
 # Show all colors
-function showcolor()
-{
+function showcolor() {
 	echo -en "${txtblk}txtblk${EE} "
 	echo -en "${txtred}txtred${EE} "
 	echo -en "${txtgrn}txtgrn${EE} "
