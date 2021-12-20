@@ -1,6 +1,6 @@
 # Code
 
-if [[ $WHERE == $MY_PSU ]]; then
+if [[ $H_WHERE == $MY_PSU ]]; then
 	alias proj='cd $PROJ'
 	alias prac='cd $PRAC'
 	alias plan='proj && cd planner && vim -S ~/.vim/sessions/planner/def.vim -S ~/.vimrc'
@@ -11,7 +11,7 @@ fi
 alias vrc='vim $VRC'
 
 # Bash
-alias alldot='vim -p $BRC $ABRC $SOURCER $BFUNCS $BCOLORS $BSCRIPTS $INPUTRC'
+#alias alldot='vim -p $BRC $ABRC $SOURCER $BFUNCS $BCOLORS $BSCRIPTS $INPUTRC'
 alias brc='vim $BRC'
 alias abrc='vim $ABRC'
 alias sourcer='vim $ABRC'
@@ -44,6 +44,6 @@ alias ..='cd ../..'
 alias ...='cd ../../..'
 alias bb='cd -'
 
-if [[ $WHERE == $MY_TCSS ]]; then
+if [[ $H_WHERE == $MY_TCSS ]]; then
     alias master='cd /mnt/quizor/materials && ls'
 fi

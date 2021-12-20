@@ -1,4 +1,22 @@
-if [[ $WHERE == $MY_TCSS ]]; then
+function dot()
+{
+	if [[ $1 == "all" ]]; then
+		vim -p $BRC $ABRC $SOURCER $BFUNCS $BCOLORS $BSCRIPTS $INPUTRC
+	elif [[ $1 == "pull" ]]; then
+		pulldot
+	elif [[ $1 == "push" ]]; then
+		shift
+		pushdot "$@"
+	else
+		HOLD=''
+		for x in "$@"; do
+			HOLD="${HOLD} ${x}"
+		done
+		echo ${HOLD}
+	fi
+}
+
+if [[ $H_WHERE == $MY_TCSS ]]; then
     function c1() {
         cd ~/CS162/Lab$@ && ls 
     }
