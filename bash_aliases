@@ -1,6 +1,6 @@
 # Code
 
-if [[ $WHERE == $MY_PSU ]]; then
+if [[ $H_WHERE == $MY_PSU ]]; then
 	alias proj='cd $PROJ'
 	alias prac='cd $PRAC'
 	alias plan='proj && cd planner && vim -S ~/.vim/sessions/planner/def.vim -S ~/.vimrc'
@@ -44,6 +44,6 @@ alias ..='cd ../..'
 alias ...='cd ../../..'
 alias bb='cd -'
 
-if [[ $WHERE == $MY_TCSS ]]; then
+if [[ $H_WHERE == $MY_TCSS ]]; then
     alias master='cd /mnt/quizor/materials && ls'
 fi

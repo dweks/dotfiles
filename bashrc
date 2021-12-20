@@ -3,7 +3,9 @@ stty -ixon
 
 echo -e "\e[0;33mbashrc sourced!\e[m"
 
-export WHERE=$(hostname)
+export H_WHERE=$(hostname)
+export D_WHERE=$(dnsdomainname)
+MY_DNS='cs.pdx.edu'
 MY_HOME='sqDesk'
 MY_PSU='ada.cs.pdx.edu'
 MY_TCSS='quizor1.cs.pdx.edu'
@@ -28,11 +30,11 @@ else
 fi
 
 # Code
-if [[ $WHERE == $MY_PSU ]]; then
+if [[ $H_WHERE == $MY_PSU ]]; then
 	PROJ=~/code/proj
 	PRAC=~/code/prac
 fi
-if [[ $WHERE == $MY_HOME ]]; then
+if [[ $H_WHERE == $MY_HOME ]]; then
 	SCRIPTS=~/scripts
 fi
 
