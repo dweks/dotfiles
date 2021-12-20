@@ -1,7 +1,9 @@
 export TERM=xterm-256color
 stty -ixon
 
-echo -e "\e[0;33mbashrc sourced!\e[m"
+if [ "$SSH_TTY" ]; then
+	echo -e "\e[0;33mbashrc sourced!\e[m"
+fi
 
 export WHERE=$(hostname)
 MY_HOME='sqDesk'
