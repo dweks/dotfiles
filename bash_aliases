@@ -11,7 +11,7 @@ fi
 alias vrc='vim $VRC'
 
 # Bash
-alias alldot='vim -p $BRC $ABRC $SOURCER $BFUNCS $BCOLORS $BSCRIPTS $INPUTRC'
+#alias alldot='vim -p $BRC $ABRC $SOURCER $BFUNCS $BCOLORS $BSCRIPTS $INPUTRC'
 alias brc='vim $BRC'
 alias abrc='vim $ABRC'
 alias sourcer='vim $ABRC'
