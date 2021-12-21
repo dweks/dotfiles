@@ -4,6 +4,7 @@ stty -ixon
 export H_WHERE=$(hostname)
 export D_WHERE=$(dnsdomainname)
 
+# SFTP does not like this message, only show if bashrc runs from SSH or desktop
 if [ "$SSH_TTY" ] || [[ ${H_WHERE} == ${MY_HOME} ]]; then
 	echo -e "\e[0;33mbashrc sourced!\e[m"
 fi
@@ -15,7 +16,7 @@ MY_TCSS='quizor1.cs.pdx.edu'
 
 # All servers
 DOTFILES=~/dotfiles
-export VRC=~/.vim/vimrc
+export VRC=~/vimrc
 export BRC=~/.bashrc
 export ABRC=~/.bash_aliases
 
@@ -42,7 +43,7 @@ if [[ $H_WHERE == $MY_HOME ]]; then
 fi
 
 # Default Environmental variables
-export PS1="\[${bldblk}\]\h: \w\n${EEE}\[${txtylw}\]\j${EEE} \[${bldgrn}\]>> ${EEE}" # Prompt customization
+export PS1="\[${bldblk}\]\h: \w\n${EEE}\[${txtcyn}\]\j${EEE}\[${bldblk}\]|${EEE}\[${bldred}\]>> ${EEE}" # Prompt customization
 export LS_COLORS=$LS_COLORS:'di=1;34:*.cpp=32:*.h=33:*.c=31:*.o=35:' # LS colors
 export PATH=${PATH}:/cat/bin # look in the cat bin
 export PATH=${PATH}:/scripts # enable global script execution

@@ -35,7 +35,7 @@ nnoremap <C-n> mmjdd`m
 nnoremap ds mnkddp`n
 
 " add semicolon to end of line
-nnoremap ;; ma$a;<Esc>`a
+"nnoremap ;; ma$a;<Esc>`a
 
 " remove brackets/quotes
 nnoremap <C-\><C-\> ma%mb%x`bx`a
