@@ -7,6 +7,8 @@ function dot()
 	elif [[ $1 == "push" ]]; then
 		shift
 		pushdot "$@"
+	elif [[ $1 == "check" ]]; then
+		checkdot
 	else
 		HOLD=''
 		for x in "$@"; do
@@ -50,6 +52,11 @@ function pushdot() {
 	git -C $DOTFILES status
 	echo -e "\e[0;33mPushing to GitHub...\e[m"
 	git -C $DOTFILES push
+}
+
+function checkdot() {
+	echo -e "\e[0;33mChecking dotfiles...\e[m"
+	git -C ~/dotfiles/ status
 }
 
 # Show all colors
