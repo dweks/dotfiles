@@ -41,7 +41,7 @@ if [[ $H_WHERE == $MY_HOME ]]; then
 fi
 
 # Default Environmental variables
-export PS1="\[${bldblk}\]\H: \w\n${EEE}\[${bldgrn}\]>> ${EEE}" # Prompt customization
+export PS1="\[${bldblk}\]\h: \w\n${EEE}\[${txtylw}\]\j${EEE} \[${bldgrn}\]>> ${EEE}" # Prompt customization
 export LS_COLORS=$LS_COLORS:'di=1;34:*.cpp=32:*.h=33:*.c=31:*.o=35:' # LS colors
 export PATH=${PATH}:/cat/bin # look in the cat bin
 export PATH=${PATH}:/scripts # enable global script execution
