@@ -1,12 +1,13 @@
 export TERM=xterm-256color
 stty -ixon
 
-if [ "$SSH_TTY" ]; then
+export H_WHERE=$(hostname)
+export D_WHERE=$(dnsdomainname)
+
+if [ "$SSH_TTY" ] || [[ ${H_WHERE} == ${MY_HOME} ]]; then
 	echo -e "\e[0;33mbashrc sourced!\e[m"
 fi
 
-export H_WHERE=$(hostname)
-export D_WHERE=$(dnsdomainname)
 MY_DNS='cs.pdx.edu'
 MY_HOME='sqDesk'
 MY_PSU='ada.cs.pdx.edu'
