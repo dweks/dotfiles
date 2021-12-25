@@ -1,6 +1,7 @@
 export TERM=xterm-256color
 stty -ixon
 
+# test
 export H_WHERE=$(hostname)
 export D_WHERE=$(dnsdomainname)
 
