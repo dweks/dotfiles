@@ -49,12 +49,22 @@ xnoremap <C-\>[ <Esc>`<i[<Esc>`>a]<Esc>
 xnoremap <C-\>" <Esc>`<i"<Esc>`>a"<Esc>
 
 " insert bracket pairs
+<<<<<<< HEAD
 inoremap () ()<Esc>i
 inoremap "" ""<Esc>i
 inoremap [] []<Esc>i
 inoremap {} {}<Esc>i
+=======
+inoremap (( ()<Esc>i
+inoremap "" ""<Esc>i
+inoremap [[ []<Esc>i
+inoremap {{ {}<Esc>i
+" maybe use this? inoremap < <><Esc>i
+" maybe use this? inoremap << <<Esc>i
+
+>>>>>>> fbf01b7895461e13fbd9df776306dd2e83d1eb3d
 " Make curly block
-imap {{{ <Esc>$o{<CR><Esc>ko<Tab>
+imap {{{ {<CR>}<Esc>ko<Tab>
 
 " complement to insert bracket pairs - moves out of bracket
 inoremap <C-l> <Esc>la

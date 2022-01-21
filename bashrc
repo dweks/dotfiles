@@ -50,3 +50,4 @@ export PATH=${PATH}:/scripts # enable global script execution
 export MANPATH=${MANPATH}:/cat/man # look in cat for manpages too
 export EDITOR=$(which vi) # sets vim as the standard editor
 
+. "$HOME/.cargo/env"

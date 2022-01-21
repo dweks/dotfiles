@@ -7,6 +7,9 @@ if [[ $H_WHERE == $MY_PSU ]]; then
 	alias set='proj && cd set-build' #takes me directly to set-builder
 fi
 
+# Rust
+alias scargo='source ~/.cargo/env'
+
 # Vim
 alias vrc='vim $VRC'
 
