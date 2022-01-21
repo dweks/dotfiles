@@ -10,8 +10,12 @@ set nocursorcolumn
 set nowrap
 set laststatus=2 
 set autoindent "newline stays indented
-set tabstop=4 "4 spaces when press tab key
+
+set tabstop=4 
+set softtabstop=4 "4 spaces when press tab key
 set shiftwidth=4 "4 spaces when use > to indent
+set expandtab
+
 set ruler
 set so=5 "keeps cursor near center of window (lower numbers give normal buffer)
 :nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
@@ -20,22 +24,15 @@ set so=5 "keeps cursor near center of window (lower numbers give normal buffer)
 nnoremap <C-h> gT
 nnoremap <C-l> gt
 
-" Adds blank line below/above (normal mode)
-nnoremap <C-j> mno<Esc>`n
-nnoremap <C-k> mnO<Esc>`n
-
 " source with Ctrl+s
 nnoremap <C-s> :source $VRC<CR>
 
-" Delete lines above/below
-nnoremap <C-i> mmkdd`m 
-nnoremap <C-n> mmjdd`m 
+" scooch lines above/below
+nnoremap <C-i> ddkP 
+nnoremap <C-n> ddp 
 
 " swap next line with current
 nnoremap ds mnkddp`n
-
-" add semicolon to end of line
-"nnoremap ;; ma$a;<Esc>`a
 
 " remove brackets/quotes
 nnoremap <C-\><C-\> ma%mb%x`bx`a
@@ -48,28 +45,17 @@ xnoremap <C-\>[ <Esc>`<i[<Esc>`>a]<Esc>
 xnoremap <C-\>" <Esc>`<i"<Esc>`>a"<Esc>
 
 " insert bracket pairs
-inoremap (( ()<Esc>i
+inoremap () ()<Esc>i
 inoremap "" ""<Esc>i
-inoremap [[ []<Esc>i
-inoremap {{ {}<Esc>i
-" maybe use this? inoremap < <><Esc>i
-" maybe use this? inoremap << <<Esc>i
+inoremap [] []<Esc>i
+inoremap {} {}<Esc>i
 
-" Make curly block
-imap {{{ {<CR>}<Esc>ko<Tab>
-
-" complement to insert bracket pairs - moves out of bracket
+" move cursor left/right in insert mode
 inoremap <C-l> <Esc>la
 inoremap <C-h> <Esc>i
 
-" swap next line with current
-nnoremap ds mmjddk<S-p>`m
-
-" add semicolon to end of line (does nto work): nnoremap <C-;> mn<S-4>a;<Esc>`n
-
-
-
-
+" Make curly block
+imap {{{ {<CR>}<Esc>ko<Tab>
 
 " Syntax
 hi Constant ctermfg=169
