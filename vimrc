@@ -24,10 +24,6 @@ set so=5 "keeps cursor near center of window (lower numbers give normal buffer)
 nnoremap <C-h> gT
 nnoremap <C-l> gt
 
-" Adds blank line below/above (normal mode)
-nnoremap <C-j> mno<Esc>`n
-nnoremap <C-k> mnO<Esc>`n
-
 " source with Ctrl+s
 nnoremap <C-s> :source $VRC<CR>
 
@@ -58,17 +54,8 @@ inoremap {} {}<Esc>i
 inoremap <C-l> <Esc>la
 inoremap <C-h> <Esc>i
 
-<<<<<<< HEAD
-" swap next line with current
-nnoremap ds mmjddk<S-p>`m
-
-" add semicolon to end of line (does nto work): nnoremap <C-;> mn<S-4>a;<Esc>`n
-
-hi SpecialKey cterm=none ctermfg=139 ctermbg=none
-=======
 " Make curly block
 imap {{{ {<CR>}<Esc>ko<Tab>
->>>>>>> 6f905b557c18bf1dc623b84c342e5f86bd0c11fe
 
 " Syntax
 hi Constant ctermfg=169
