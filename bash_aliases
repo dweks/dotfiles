@@ -14,24 +14,21 @@ alias scargo='source ~/.cargo/env'
 alias vrc='vim $VRC'
 
 # Bash
-#alias alldot='vim -p $BRC $ABRC $SOURCER $BFUNCS $BCOLORS $BSCRIPTS $INPUTRC'
+alias scb='source $BRC'
 alias brc='vim $BRC'
 alias abrc='vim $ABRC'
 alias sourcer='vim $ABRC'
-
 alias bscripts='vim $BRC'
 alias bcolors='vim $BCOLORS'
 alias inputrc='vim $INPUTRC'
 alias bfuncs='vim $BFUNCS'
-
-alias scb='source $BRC'
 
 # Server jumps
 alias quizor='ssh blak7@quizor1.cs.pdx.edu'
 alias psu='ssh blak7@ada.cs.pdx.edu'
 
 # Actions
-alias rmswp='rm *.swp *.swo -v' # Clean Swap files
+alias rmswp='rm .*.swp .*.swo -v' # Clean Swap files
 alias leak='clear && valgrind --leak-check=full ./a.out' # Run compiled program with valgrind
 alias cmp='clear && g++ -Wall -g *.cpp *.o'
 alias acmp='cmp && ./a.out'
