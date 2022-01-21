@@ -10,8 +10,12 @@ set nocursorcolumn
 set nowrap
 set laststatus=2 
 set autoindent "newline stays indented
-set tabstop=4 "4 spaces when press tab key
+
+set tabstop=4 
+set softtabstop=4 "4 spaces when press tab key
 set shiftwidth=4 "4 spaces when use > to indent
+set expandtab
+
 set ruler
 set so=5 "keeps cursor near center of window (lower numbers give normal buffer)
 :nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
@@ -67,9 +71,7 @@ nnoremap ds mmjddk<S-p>`m
 
 " add semicolon to end of line (does nto work): nnoremap <C-;> mn<S-4>a;<Esc>`n
 
-
-
-
+hi SpecialKey cterm=none ctermfg=139 ctermbg=none
 
 " Syntax
 hi Constant ctermfg=169
