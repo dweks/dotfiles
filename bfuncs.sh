@@ -1,3 +1,4 @@
+source ${DOTFILES}/bs.sh
 function dot()
 {
 	if [[ $1 == "all" ]]; then
@@ -94,3 +95,4 @@ function showcolor() {
 	echo -en "${bakcyn}bakcyn${EE} "
 	echo -e  "${bakwht}bakwht${EE} "
 }
+

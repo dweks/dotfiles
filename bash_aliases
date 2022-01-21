@@ -38,9 +38,9 @@ alias acmp='cmp && ./a.out'
 
 # List mods
 # c: mod time, 1: vert, X: sort by ext, F: indicator symb, A: show all, g: no show owner
-alias ls='ls -1XF --color=auto'
-alias la='ls -A'
-alias ll='la -gc'
+alias ls='ls -XF --color=auto'
+alias lc='ls -1'
+alias la='ls -gA'
 
 # Navigation
 alias .='cd ..'
