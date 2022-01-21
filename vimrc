@@ -31,15 +31,12 @@ nnoremap <C-k> mnO<Esc>`n
 " source with Ctrl+s
 nnoremap <C-s> :source $VRC<CR>
 
-" Delete lines above/below
-nnoremap <C-i> mmkdd`m 
-nnoremap <C-n> mmjdd`m 
+" scooch lines above/below
+nnoremap <C-i> ddkP 
+nnoremap <C-n> ddp 
 
 " swap next line with current
 nnoremap ds mnkddp`n
-
-" add semicolon to end of line
-"nnoremap ;; ma$a;<Esc>`a
 
 " remove brackets/quotes
 nnoremap <C-\><C-\> ma%mb%x`bx`a
@@ -52,26 +49,26 @@ xnoremap <C-\>[ <Esc>`<i[<Esc>`>a]<Esc>
 xnoremap <C-\>" <Esc>`<i"<Esc>`>a"<Esc>
 
 " insert bracket pairs
-inoremap (( ()<Esc>i
+inoremap () ()<Esc>i
 inoremap "" ""<Esc>i
-inoremap [[ []<Esc>i
-inoremap {{ {}<Esc>i
-" maybe use this? inoremap < <><Esc>i
-" maybe use this? inoremap << <<Esc>i
+inoremap [] []<Esc>i
+inoremap {} {}<Esc>i
 
-" Make curly block
-imap {{{ {<CR>}<Esc>ko<Tab>
-
-" complement to insert bracket pairs - moves out of bracket
+" move cursor left/right in insert mode
 inoremap <C-l> <Esc>la
 inoremap <C-h> <Esc>i
 
+<<<<<<< HEAD
 " swap next line with current
 nnoremap ds mmjddk<S-p>`m
 
 " add semicolon to end of line (does nto work): nnoremap <C-;> mn<S-4>a;<Esc>`n
 
 hi SpecialKey cterm=none ctermfg=139 ctermbg=none
+=======
+" Make curly block
+imap {{{ {<CR>}<Esc>ko<Tab>
+>>>>>>> 6f905b557c18bf1dc623b84c342e5f86bd0c11fe
 
 " Syntax
 hi Constant ctermfg=169

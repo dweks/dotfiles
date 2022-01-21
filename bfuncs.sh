@@ -9,12 +9,6 @@ function dot()
 		pushdot "$@"
 	elif [[ $1 == "check" ]]; then
 		checkdot
-	else
-		HOLD=''
-		for x in "$@"; do
-			HOLD="${HOLD} ${x}"
-		done
-		echo ${HOLD}
 	fi
 }
 

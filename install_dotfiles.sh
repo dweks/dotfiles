@@ -1,4 +1,3 @@
-
 rc="bashrc bash_aliases vimrc"
 
 for dotfile in $rc; do
