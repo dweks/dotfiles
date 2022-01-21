@@ -27,15 +27,16 @@ nnoremap <C-k> mnO<Esc>`n
 " source with Ctrl+s
 nnoremap <C-s> :source $VRC<CR>
 
-" Delete lines above/below
-nnoremap <C-i> mmkdd`m 
-nnoremap <C-n> mmjdd`m 
+" Scooch lines above/below
+nnoremap <C-n> ddp 
+nnoremap <C-i> ddkP 
 
 " swap next line with current
 nnoremap ds mnkddp`n
 
 " add semicolon to end of line
-"nnoremap ;; ma$a;<Esc>`a
+nnoremap ;; ma$a;<Esc>`a
+
 
 " remove brackets/quotes
 nnoremap <C-\><C-\> ma%mb%x`bx`a
@@ -48,18 +49,10 @@ xnoremap <C-\>[ <Esc>`<i[<Esc>`>a]<Esc>
 xnoremap <C-\>" <Esc>`<i"<Esc>`>a"<Esc>
 
 " insert bracket pairs
-inoremap ( ()<Esc>i
-inoremap (( (<Esc>a
-inoremap () ()<Esc>a
-inoremap " ""<Esc>i
-inoremap "" "<Esc>a
-inoremap [ []<Esc>i
-inoremap [[ [<Esc>a
-" maybe use this? inoremap < <><Esc>i
-" maybe use this? inoremap << <<Esc>i
-inoremap { {}<Esc>i
-inoremap {{ {<Esc>a
-
+inoremap () ()<Esc>i
+inoremap "" ""<Esc>i
+inoremap [] []<Esc>i
+inoremap {} {}<Esc>i
 " Make curly block
 imap {{{ <Esc>$o{<CR><Esc>ko<Tab>
 
@@ -67,8 +60,6 @@ imap {{{ <Esc>$o{<CR><Esc>ko<Tab>
 inoremap <C-l> <Esc>la
 inoremap <C-h> <Esc>i
 
-" swap next line with current
-nnoremap ds mmjddk<S-p>`m
 
 " add semicolon to end of line (does nto work): nnoremap <C-;> mn<S-4>a;<Esc>`n
 

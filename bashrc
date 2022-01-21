@@ -16,7 +16,7 @@ MY_TCSS='quizor1.cs.pdx.edu'
 
 # All servers
 DOTFILES=~/dotfiles
-export VRC=~/vimrc
+export VRC=~/.vimrc
 export BRC=~/.bashrc
 export ABRC=~/.bash_aliases
 
