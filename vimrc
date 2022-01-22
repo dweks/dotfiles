@@ -127,8 +127,8 @@ hi StatusLineNC cterm=none ctermbg=237 ctermfg=248
 hi VertSplit cterm=none ctermbg=237 ctermfg=237
 
 if &term =~ "xterm\\|rxvt"
-  " use an orange cursor in insert mode
-  let &t_SI = "\<Esc>]12;green\x7"
+  " use an yellow cursor in insert mode
+  let &t_SI = "\<Esc>]12;yellow\x7"
   " use a red cursor otherwise
   let &t_EI = "\<Esc>]12;red\x7"
   silent !echo -ne "\033]12;red\007"
