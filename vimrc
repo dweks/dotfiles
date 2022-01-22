@@ -49,15 +49,15 @@ nnoremap <C-\><C-\> ma%mb%x`bx`a
 nnoremap <C-\>" maf"xF"x`a
 
 " wrap in brackets/quotes
-"xnoremap <C-\>( <Esc>`<i(<Esc>`>a)<Esc>
-"xnoremap <C-\>{ <Esc>`<i{<Esc>`>a}<Esc>
-"xnoremap <C-\>[ <Esc>`<i[<Esc>`>a]<Esc>
-"xnoremap <C-\>" <Esc>`<i"<Esc>`>a"<Esc>
+xnoremap <C-\>( <Esc>`<i(<Esc>`>a)<Esc>
+xnoremap <C-\>{ <Esc>`<i{<Esc>`>a}<Esc>
+xnoremap <C-\>[ <Esc>`<i[<Esc>`>a]<Esc>
+xnoremap <C-\>" <Esc>`<i"<Esc>`>a"<Esc>
 
 " insert bracket pairs
-inoremap () ()<Esc>i
-inoremap [] []<Esc>i
-inoremap {} {}<Esc>i
+"inoremap () ()<Esc>i
+"inoremap [] []<Esc>i
+"inoremap {} {}<Esc>i
 
 " move cursor left/right in insert mode
 inoremap <C-l> <Esc>la
