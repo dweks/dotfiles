@@ -20,8 +20,17 @@ function count_files() {
 function ls_dirs() {
 	local d_row="${bldblk} | ${EE}"
 	local f_row="${bldblk} + ${EE}"
-	for f in */ .*/; do
-		if ! [[ "$f" == "../" ]] && ! [[ "$f" == "./" ]]; then
+    if ! [ -z $1 ]; then
+        local dir="$1"
+        local dot=""
+    else
+        local dir="*/"
+        local dot=".*/"
+    fi
+
+	for f in "$dir" "$dot"; do
+		if ! [[ "$f" == "../" ]] && ! [[ "$f" == "./" ]] && ! [[ "$f" == "*/" ]]; then
+            echo "test: f = $f"
 			num_files=$(count_files $f)
 			echo -e "${bldblu}${f%/}${EE} (${txtylw}$num_files${EE})"
 
@@ -35,7 +44,7 @@ function ls_dirs() {
 			done
 
 			# if files exist, list them
-
+            # pass number of files for loop control
 			if [ "$num_files" -ge 1 ]; then
 				echo -ne "$f_row"
 				ls_files $f $num_files
@@ -80,7 +89,7 @@ function bs(){
 	dir_count=$(count_dirs)
 	file_count=$(count_files)
 
-	ls_dirs $file_count
+	ls_dirs $1
 	ls_files * $file_count
 }
 

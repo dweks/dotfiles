@@ -92,7 +92,7 @@ set cursorline  "shows the line
 " Fold Column
 hi FoldColumn cterm=none ctermbg=235 ctermfg=66
 hi Folded cterm=none ctermbg=235 ctermfg=66
-set foldnestmax=1
+set foldnestmax=3
 set foldmethod=indent
 set foldcolumn=1
 set foldenable
