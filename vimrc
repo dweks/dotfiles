@@ -23,6 +23,7 @@ set linebreak "avoid wrapping a line in middle of word (set wrap to use)
 set scrolloff=5 "keeps cursor near center of window (lower numbers give normal buffer)
 :nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 set sidescrolloff=5
+set autoread "if file changes outside of vim, reload with changes automatically
 
 "" INTERFACE
 set ruler " shows column/line in status bar
