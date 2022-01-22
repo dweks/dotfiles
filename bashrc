@@ -25,7 +25,6 @@ BSCRIPTS=${DOTFILES}/bscripts.sh
 BCOLORS=${DOTFILES}/bcolors.sh
 BFUNCS=${DOTFILES}/bfuncs.sh
 #INPUTRC=${DOTFILES}/inputrc.sh
-
 # source master sourcer
 if [ -f ${SOURCER} ]; then
 	source ${SOURCER}
@@ -47,7 +46,7 @@ fi
 export PS1="\[${bldblk}\]\h: \w\n${EEE}\[${txtcyn}\]\j${EEE}\[${bldblk}\]|${EEE}\[${bldred}\]>> ${EEE}" # Prompt customization
 export LS_COLORS=$LS_COLORS:'di=1;34:*.cpp=32:*.h=33:*.c=31:*.o=35:' # LS colors
 export PATH=${PATH}:/cat/bin # look in the cat bin
+export PATH=${PATH}:/.cargo/env
 export MANPATH=${MANPATH}:/cat/man # look in cat for manpages too
 export EDITOR=$(which vim) # sets vim as the standard editor
 
-. "$HOME/.cargo/env"

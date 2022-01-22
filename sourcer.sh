@@ -12,13 +12,6 @@ else
 	echo "${BSCRIPTS} doesn't exist!"
 fi
 
-# source inputrc
-if [ -f ${INPUTRC} ]; then
-	source ${INPUTRC}
-else
-	echo "${INPUTRC} doesn't exist!"
-fi
-
 # source bash color variables
 if [ -f ${BCOLORS} ]; then
 	source ${BCOLORS}

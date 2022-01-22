@@ -31,6 +31,10 @@ set title "shows file being edited in window title
 set wildmenu " tab autocomplete in command mode shown in list
 set mouse=a
 
+"" MISCELLANEOUS
+"set spell spelllang=en_us "set spell check language to us english
+
+
 " Set leader prefix
 let maplocalleader = "\\"
 
