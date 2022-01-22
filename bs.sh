@@ -52,7 +52,6 @@ function ls_files() {
 	local MAX=5
 	local f_sep="  "
 	for n in ${1}* ${1}.*; do
-		echo "_________ n: $n"
 		if [ "$count" -ge "$MAX" ]; then
 			((rem-=count))
 			rem="${bldylw}+${rem}${EE}"
@@ -75,14 +74,14 @@ function ls_files() {
 	echo
 }
 
+# counts dirs and files then passes to ls funcs for output
+# and limitations for too many files
 function bs(){
 	dir_count=$(count_dirs)
 	file_count=$(count_files)
 
-	# List non-hidden directories
 	ls_dirs $file_count
 	ls_files * $file_count
-
 }
 
 function name_dir () {
