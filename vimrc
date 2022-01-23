@@ -16,7 +16,7 @@ set expandtab "uses appropriate spaces for tab in insert mode
 
 "" TEXT RENDERING
 syntax enable
-set textwidth=90 "puts anything after 90 chars + whitespace on a new line
+"set textwidth=90 "puts anything after 90 chars + whitespace on a new line
 set nowrap "wraps text that reaches edge of window
 set linebreak "avoid wrapping a line in middle of word (set wrap to use)
 set scrolloff=5 "keeps cursor near center of window (lower numbers give normal buffer)
@@ -127,15 +127,14 @@ set showtabline=2
 
 " Status Line/Split
 set laststatus=2 " shows status line on all windows 
-set statusline=%#sq_FileName#%r\ %<%F%h\ %#sq_Unsaved#%M%#HLname#%=\ %P\ \|\ %l\/%L\ 
+set statusline=%#sq_Unsaved#%M%#sq_FileName#%r\ %<%F%h\ %#HLname#%=\|\ Line\:\ %l\/%L\ (%P)\ \|\ Col\:\ %c\ 
 
 
 " Custom
-hi sq_Unsaved cterm=bold ctermbg=none ctermfg=226
+hi sq_Unsaved cterm=bold ctermbg=202 ctermfg=202
+
 hi sq_Position cterm=none ctermbg=243 ctermfg=187 
 hi sq_FileName cterm=none ctermbg=238 ctermfg=253
-
-
 
 hi Conceal ctermfg=252 ctermbg=238
 hi StatusLine cterm=none ctermbg=59 ctermfg=230
