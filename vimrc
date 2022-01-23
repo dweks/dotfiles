@@ -6,7 +6,6 @@ colorscheme slate
 "" SEARCH
 set encoding=utf-8
 set showcmd "shows partial command at end of status bar
-set laststatus=2 " shows status line on all windows 
 
 "" INDENT
 set autoindent "newline stays indented
@@ -120,15 +119,27 @@ hi PmenuSbar cterm=none ctermbg=237
 hi PmenuThumb cterm=none ctermbg=136
 
 " Tabline
-hi TabLine cterm=none ctermbg=237 ctermfg=247
-hi TabLineFill cterm=none ctermfg=249 ctermbg=237
-hi TabLineSel cterm=none ctermbg=235 ctermfg=227
-hi Title cterm=none ctermfg=248
+hi TabLine cterm=none ctermbg=235 ctermfg=247
+hi TabLineSel cterm=none ctermbg=237 ctermfg=227
+hi TabLineFill cterm=none ctermbg=235 ctermfg=2
+hi Title cterm=none ctermfg=250
 set showtabline=2
 
 " Status Line/Split
-hi StatusLine cterm=none ctermbg=240 ctermfg=230
-hi StatusLineNC cterm=none ctermbg=237 ctermfg=248
+set laststatus=2 " shows status line on all windows 
+set statusline=%#sq_FileName#%r\ %<%F%h\ %#sq_Unsaved#%M%#HLname#%=\ %P\ \|\ %l\/%L\ 
+
+
+" Custom
+hi sq_Unsaved cterm=bold ctermbg=none ctermfg=226
+hi sq_Position cterm=none ctermbg=243 ctermfg=187 
+hi sq_FileName cterm=none ctermbg=238 ctermfg=253
+
+
+
+hi Conceal ctermfg=252 ctermbg=238
+hi StatusLine cterm=none ctermbg=59 ctermfg=230
+hi StatusLineNC cterm=none ctermbg=236 ctermfg=248
 hi VertSplit cterm=none ctermbg=237 ctermfg=237
 
 if &term =~ "xterm\\|rxvt"
