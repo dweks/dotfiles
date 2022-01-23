@@ -14,7 +14,7 @@ export MY_HOME='sqLap'
 export MY_PSU='ada.cs.pdx.edu'
 export MY_TCSS='quizor1.cs.pdx.edu'
 
-# All servers
+# All hosts
 DOTFILES=~/dotfiles
 export VRC=~/.vimrc
 export BRC=~/.bashrc
@@ -25,6 +25,7 @@ BSCRIPTS=${DOTFILES}/bscripts.sh
 BCOLORS=${DOTFILES}/bcolors.sh
 BFUNCS=${DOTFILES}/bfuncs.sh
 #INPUTRC=${DOTFILES}/inputrc.sh
+
 # source master sourcer
 if [ -f ${SOURCER} ]; then
 	source ${SOURCER}

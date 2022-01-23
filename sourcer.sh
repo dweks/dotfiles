@@ -1,3 +1,7 @@
+# source rust cargo (with alias)
+if [ $H_WHERE == $MY_PSU ]; then
+    scargo
+fi
 # source bash aliases file
 if [ -f ${ABRC} ]; then
 	source ${ABRC}
