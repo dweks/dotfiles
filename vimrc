@@ -23,10 +23,8 @@ set sidescrolloff=5
 
 "" INTERFACE
 set autoread "if file changes outside of vim, reload with changes automatically
-set ruler " shows column/line in status bar
-set title "shows file being edited in window title
 set wildmenu " tab autocomplete in command mode shown in list
-set mouse=a
+set mouse=a "enable mouse
 set cmdheight=1
 set nospell
 set nocursorcolumn
@@ -98,7 +96,7 @@ hi Normal cterm=none ctermbg=235
 hi ErrorMsg cterm=none ctermbg=0 ctermfg=82
 hi ModeMsg cterm=bold ctermfg=15 ctermbg=233
 
-"Search Search/Autofill
+" Search/Autofill
 hi Search cterm=none ctermbg=237 ctermfg=255
 hi IncSearch cterm=none ctermbg=231 ctermfg=226
 set incsearch "when searching with / start hiing with each character"
@@ -112,7 +110,7 @@ hi PmenuThumb cterm=none ctermbg=241
 
 " Tabline
 hi TabLine cterm=none ctermbg=234 ctermfg=243
-hi TabLineSel cterm=none ctermbg=240 ctermfg=231
+hi TabLineSel cterm=none ctermbg=238 ctermfg=231
 hi TabLineFill cterm=none ctermbg=236 ctermfg=2
 hi Title cterm=none ctermfg=250
 set showtabline=2
