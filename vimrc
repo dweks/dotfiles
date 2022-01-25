@@ -3,7 +3,7 @@ if $TERM == "xterm-256color"
 endif
 
 colorscheme slate
-"" SEARCH
+" SEARCH
 set encoding=utf-8
 set showcmd "shows partial command at end of status bar
 
@@ -14,25 +14,29 @@ set softtabstop=4 "4 spaces when press tab key
 set shiftwidth=4 "4 spaces when use > to indent
 set expandtab "uses appropriate spaces for tab in insert mode 
 
-"" TEXT RENDERING
+" TEXT RENDERING
 syntax enable
-"set textwidth=90 "puts anything after 90 chars + whitespace on a new line
 set nowrap "wraps text that reaches edge of window
-set linebreak "avoid wrapping a line in middle of word (set wrap to use)
 set scrolloff=5 "keeps cursor near center of window (lower numbers give normal buffer)
-:nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
+nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 set sidescrolloff=5
-set autoread "if file changes outside of vim, reload with changes automatically
 
 "" INTERFACE
+set autoread "if file changes outside of vim, reload with changes automatically
 set ruler " shows column/line in status bar
 set title "shows file being edited in window title
 set wildmenu " tab autocomplete in command mode shown in list
 set mouse=a
+set cmdheight=1
+set nospell
+set nocursorcolumn
 
 "" MISCELLANEOUS
 "set spell spelllang=en_us "set spell check language to us english
-
+autocmd InsertEnter * hi CursorLine ctermbg=234
+autocmd InsertLeave * hi CursorLine ctermbg=236
+autocmd InsertEnter * hi CursorLineNr cterm=bold ctermbg=234 ctermfg=15
+autocmd InsertLeave * hi CursorLineNr cterm=bold ctermbg=239 ctermfg=231
 
 " Set leader prefix
 let maplocalleader = "\\"
@@ -58,11 +62,6 @@ xnoremap <C-\>{ <Esc>`<i{<Esc>`>a}<Esc>
 xnoremap <C-\>[ <Esc>`<i[<Esc>`>a]<Esc>
 xnoremap <C-\>" <Esc>`<i"<Esc>`>a"<Esc>
 
-" insert bracket pairs
-"inoremap () ()<Esc>i
-"inoremap [] []<Esc>i
-"inoremap {} {}<Esc>i
-
 " move cursor left/right in insert mode
 inoremap <C-l> <Esc>la
 inoremap <C-h> <Esc>i
@@ -81,65 +80,55 @@ hi Keyword ctermfg=139
 hi Type ctermfg=110
 hi MatchParen cterm=bold ctermfg=197 ctermbg=235
 
-" Number Line
+" Number/cursor Line
 hi LineNr ctermfg=242 ctermbg=235
 hi CursorLine cterm=none ctermbg=234 ctermfg=none
-hi CursorLineNr cterm=none ctermbg=234 ctermfg=228
+hi CursorLineNr cterm=bold ctermbg=234 ctermfg=15
+hi CursorColumn cterm=none ctermbg=236 ctermfg=none
 set number "Shows the number line"
-set nocursorcolumn "shows the column (remove 'no' to show)
 set cursorline  "shows the line
 
 " Fold Column
 hi FoldColumn cterm=none ctermbg=235 ctermfg=66
-hi Folded cterm=none ctermbg=235 ctermfg=66
-set foldnestmax=3
-set foldmethod=manual
-set foldcolumn=1
-set foldenable
-setlocal foldmethod=syntax
-setlocal foldlevelstart=99
 
 " Miscellaneous
 hi SpecialKey ctermfg=229
-hi Visual cterm=none ctermbg=58 ctermfg=231
+hi Visual cterm=none ctermbg=239 ctermfg=255
 hi Normal cterm=none ctermbg=235
 hi ErrorMsg cterm=none ctermbg=0 ctermfg=82
-hi ModeMsg cterm=bold ctermfg=190 ctermbg=233
+hi ModeMsg cterm=bold ctermfg=15 ctermbg=233
 
-" Search/Autofill
-hi Search ctermbg=233 ctermfg=230
-hi IncSearch cterm=bold ctermbg=239 ctermfg=226
+"Search Search/Autofill
+hi Search cterm=none ctermbg=237 ctermfg=255
+hi IncSearch cterm=none ctermbg=231 ctermfg=226
 set incsearch "when searching with / start hiing with each character"
 set hlsearch "hi all search matches"
 
 " Autofill
-hi Pmenu cterm=none ctermbg=233 ctermfg=245
-hi PmenuSel cterm=none ctermbg=235 ctermfg=226
+hi Pmenu cterm=none ctermbg=237 ctermfg=250
+hi PmenuSel cterm=none ctermbg=234 ctermfg=255
 hi PmenuSbar cterm=none ctermbg=237 
-hi PmenuThumb cterm=none ctermbg=136
+hi PmenuThumb cterm=none ctermbg=241
 
 " Tabline
-hi TabLine cterm=none ctermbg=235 ctermfg=247
-hi TabLineSel cterm=none ctermbg=237 ctermfg=227
-hi TabLineFill cterm=none ctermbg=235 ctermfg=2
+hi TabLine cterm=none ctermbg=234 ctermfg=243
+hi TabLineSel cterm=none ctermbg=240 ctermfg=231
+hi TabLineFill cterm=none ctermbg=236 ctermfg=2
 hi Title cterm=none ctermfg=250
 set showtabline=2
 
 " Status Line/Split
+hi StatusLine cterm=none ctermbg=239 ctermfg=250
+hi StatusLineNC cterm=none ctermbg=234 ctermfg=241
+hi VertSplit cterm=none ctermbg=237 ctermfg=237
 set laststatus=2 " shows status line on all windows 
-set statusline=%#sq_Unsaved#%M%#sq_FileName#%r\ %<%F%h\ %#HLname#%=\|\ Line\:\ %l\/%L\ (%P)\ \|\ Col\:\ %c\ 
+set statusline=%#sq_Unsaved#%M%#sq_FileName#%r\ %<%F%h\ %#HLname#%=\ %l\/%L\ (%P)\ \|\ %c\ 
 
 
 " Custom
 hi sq_Unsaved cterm=bold ctermbg=202 ctermfg=202
-
 hi sq_Position cterm=none ctermbg=243 ctermfg=187 
-hi sq_FileName cterm=none ctermbg=238 ctermfg=253
-
-hi Conceal ctermfg=252 ctermbg=238
-hi StatusLine cterm=none ctermbg=59 ctermfg=230
-hi StatusLineNC cterm=none ctermbg=236 ctermfg=248
-hi VertSplit cterm=none ctermbg=237 ctermfg=237
+hi sq_FileName cterm=none ctermbg=237 ctermfg=253
 
 if &term =~ "xterm\\|rxvt"
   " use an yellow cursor in insert mode
