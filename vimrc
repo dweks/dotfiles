@@ -39,6 +39,8 @@ autocmd InsertLeave * hi CursorLineNr cterm=bold ctermbg=239 ctermfg=231
 " Set leader prefix
 let maplocalleader = "\\"
 
+nnoremap <Tab> <C-w>
+
 " Tab switching to ctrl+h, ctrl+l
 nnoremap <C-h> gT
 nnoremap <C-l> gt
@@ -63,6 +65,10 @@ xnoremap <C-\>" <Esc>`<i"<Esc>`>a"<Esc>
 " move cursor left/right in insert mode
 inoremap <C-l> <Esc>la
 inoremap <C-h> <Esc>i
+
+" keep visual selection after indenting block
+vmap < <gv
+vmap > >gv
 
 " Make curly block
 imap {{{ {<CR>}<Esc>ko<Tab>
