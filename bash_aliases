@@ -9,9 +9,6 @@ if [[ $H_WHERE == $MY_PSU ]]; then
     alias princ='cd ~/cs/cs320/'
 fi
 
-# Rust
-alias scargo='source ~/.cargo/env'
-
 # Vim
 alias vrc='vim $VRC'
 
