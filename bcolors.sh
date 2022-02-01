@@ -1,5 +1,5 @@
 EE="\e[m" # works for echo (why?)
-EEE="\[\e[m\]" # works for PS1 (why?)
+EEE="\[${EE}\]" # works for PS1 (why?)
 
 txtblk='\e[0;30m' # Black - Regular
 txtred='\e[0;31m' # Red

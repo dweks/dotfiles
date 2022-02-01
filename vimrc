@@ -38,7 +38,6 @@ autocmd InsertLeave * hi CursorLineNr cterm=bold ctermbg=239 ctermfg=231
 
 " Set leader prefix
 let maplocalleader = "\\"
-
 nnoremap <Tab> <C-w>
 
 " Tab switching to ctrl+h, ctrl+l
@@ -82,7 +81,7 @@ hi Comment ctermfg=242
 hi Statement cterm=none ctermfg=179
 hi Keyword ctermfg=139
 hi Type ctermfg=110
-hi MatchParen cterm=bold ctermfg=197 ctermbg=235
+hi MatchParen cterm=bold ctermfg=232 ctermbg=240
 
 " Number/cursor Line
 hi LineNr ctermfg=242 ctermbg=235
