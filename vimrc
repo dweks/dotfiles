@@ -65,10 +65,6 @@ xnoremap <C-\>" <Esc>`<i"<Esc>`>a"<Esc>
 inoremap <C-l> <Esc>la
 inoremap <C-h> <Esc>i
 
-" keep visual selection after indenting block
-vmap < <gv
-vmap > >gv
-
 " Make curly block
 imap {{{ {<CR>}<Esc>ko<Tab>
 
