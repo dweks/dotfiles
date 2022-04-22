@@ -1,6 +1,12 @@
 source ${DOTFILES}/bs.sh
-function dot()
-{
+
+function copy() {
+    where="blak7@$1.cs.pdx.edu:~/$2"
+    echo "Copying from: $where"
+    rsync -azv $where .
+}
+
+function dot() {
 	if [[ $1 == "all" ]]; then
 		vim -p $BRC $ABRC $SOURCER $BFUNCS $BCOLORS $BSCRIPTS $INPUTRC
 	elif [[ $1 == "pull" ]]; then
