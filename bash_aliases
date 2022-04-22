@@ -4,9 +4,6 @@ if [[ $H_WHERE == $MY_PSU ]]; then
 	alias proj='cd $PROJ'
 	alias prac='cd $PRAC'
 	alias plan='proj && cd planner && vim -S ~/.vim/sessions/planner/def.vim -S ~/.vimrc'
-	alias set='proj && cd set-build' #takes me directly to set-builder
-    alias crust='cd ~/cs/cs410/'
-    alias princ='cd ~/cs/cs320/'
 fi
 
 # Vim
