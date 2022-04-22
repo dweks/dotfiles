@@ -15,16 +15,16 @@ function dot()
 
 if [[ $H_WHERE == $MY_TCSS ]]; then
     function c1() {
-        cd ~/CS162/Lab$@ && ls 
+        cd ~/CS162/Lab$@ && vimall
     }
     function c2() {
-        cd ~/CS163/Lab$@ && ls
+        cd ~/CS163/Lab$@ && vimall
     }
     function c3() {
-        cd ~/CS202/Lab$@ && ls
+        cd ~/CS202/Lab$@ && vimall
     }
     function c4() {
-        cd ~/CS299/$@ && ls
+        cd ~/CS299/$@ && vimall
     }
 fi
 

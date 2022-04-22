@@ -11,6 +11,7 @@ fi
 
 # Vim
 alias vrc='vim $VRC'
+alias vimall='vim *.cpp *.h -p'
 
 # Bash
 alias scb='source $BRC'
