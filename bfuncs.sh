@@ -60,6 +60,7 @@ function checkdot() {
 	git -C ~/dotfiles/ status
 }
 
+
 # Show all colors
 function showcolor() {
 	echo -en "${txtblk}txtblk${EE} "
