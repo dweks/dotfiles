@@ -1,5 +1,15 @@
 source ${DOTFILES}/bs.sh
 
+function mode() {
+    if [[ $1 == "min" ]]; then
+        export PS1="\[${bldred}\]>> ${EEE}"
+    elif [[ $1 == "norm" ]]; then
+        export PS1="\[${bldblk}\]\h: \w\n${EEE}\[${txtcyn}\]\j${EEE}\[${bldblk}\]|${EEE}\[${bldred}\]>> ${EEE}"
+    elif [[ $1 == "def" ]]; then
+        export PS1="\u@\h: \W$ "
+    fi
+}
+
 function copy() {
     where="blak7@$1.cs.pdx.edu:~/$2"
     echo "Copying from: $where"
@@ -60,6 +70,7 @@ function checkdot() {
 	git -C ~/dotfiles/ status
 }
 
+
 # Show all colors
 function showcolor() {
 	echo -en "${txtblk}txtblk${EE} "
@@ -95,4 +106,3 @@ function showcolor() {
 	echo -en "${bakcyn}bakcyn${EE} "
 	echo -e  "${bakwht}bakwht${EE} "
 }
-
