@@ -20,6 +20,10 @@ alias bcolors='vim $BCOLORS'
 alias inputrc='vim $INPUTRC'
 alias bfuncs='vim $BFUNCS'
 
+# Class shortcuts
+if [[ $H_WHERE == $MY_PSU ]]; then
+    alias frac='cd ~/cs/cs410-fractals'
+fi
 # Server jumps
 alias quizor='ssh blak7@quizor1.cs.pdx.edu'
 alias psu='ssh blak7@ada.cs.pdx.edu'

@@ -6,7 +6,7 @@ function mode() {
     elif [[ $1 == "norm" ]]; then
         export PS1="\[${bldblk}\]\h: \w\n${EEE}\[${txtcyn}\]\j${EEE}\[${bldblk}\]|${EEE}\[${bldred}\]>> ${EEE}"
     elif [[ $1 == "def" ]]; then
-        export PS1="\u@\h: \W$ "
+        export PS1="\u@\h:\W$ "
     fi
 }
 
