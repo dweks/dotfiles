@@ -1,13 +1,16 @@
 source ${DOTFILES}/bs.sh
 
-function mk() {
-    cc $1 -lm -lX11   
-}
 
-function FP() {
-    newfile="${1}.c"
-    cp ../template.c ${newfile}
-}
+if [[ $H_WHERE == $sqLap ]]; then
+    function mk() {
+        cc $1 -lm -lX11   
+    }
+
+    function FP() {
+        newfile="${1}.c"
+        cp ../template.c ${newfile}
+    }
+fi
 
 function mode() {
     if [[ $1 == "min" ]]; then
