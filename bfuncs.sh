@@ -1,7 +1,7 @@
 source ${DOTFILES}/bs.sh
 
 
-if [[ $H_WHERE == $sqLap ]]; then
+if [[ $H_WHERE == $MY_HOME ]]; then
     function mk() {
         cc $1 -lm -lX11   
     }
@@ -41,20 +41,27 @@ function dot() {
 	fi
 }
 
-if [[ $H_WHERE == $MY_TCSS ]]; then
-    function c1() {
+function c1() {
+    if [[ $H_WHERE == $MY_TCSS ]]; then
         cd ~/CS162/Lab$@ && vimall
-    }
-    function c2() {
+    fi
+}
+
+function c2() {
+    if [[ $H_WHERE == $MY_TCSS ]]; then
         cd ~/CS163/Lab$@ && vimall
-    }
-    function c3() {
+    elif [[ $H_WHERE == $MY_PSU ]]; then
+        cd ~/tcss/labs/163/Lab$@ && vimall
+    fi
+}
+
+function c3() {
+    if [[ $H_WHERE == $MY_TCSS ]]; then
         cd ~/CS202/Lab$@ && vimall
-    }
-    function c4() {
-        cd ~/CS299/$@ && vimall
-    }
-fi
+    elif [[ $H_WHERE == $MY_PSU ]]; then
+        cd ~/tcss/labs/163/Lab$@ && vimall
+    fi
+}
 
 function pulldot() {
 	echo -e "\e[0;33mPulling dotfiles...\e[m"

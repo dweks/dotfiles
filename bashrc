@@ -45,7 +45,6 @@ fi
 
 # Default Environmental variables
 export PS1="\[${bldblk}\]\h: \w\n${EEE}\[${txtcyn}\]\j${EEE}\[${bldblk}\]|${EEE}\[${bldred}\]>> ${EEE}" # Prompt customization
-#export PS1="[\u@\h \w]\$ " # Used for live demo for 162
 export LS_COLORS=$LS_COLORS:'di=1;34:*.cpp=32:*.h=33:*.c=31:*.o=35:' # LS colors
 export PATH=${PATH}:/cat/bin # look in the cat bin
 export PATH=${PATH}:/.cargo/env
