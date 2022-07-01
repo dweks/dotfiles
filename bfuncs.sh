@@ -1,5 +1,14 @@
 source ${DOTFILES}/bs.sh
 
+function mk() {
+    cc $1 -lm -lX11   
+}
+
+function FP() {
+    newfile="${1}.c"
+    cp ../template.c ${newfile}
+}
+
 function mode() {
     if [[ $1 == "min" ]]; then
         export PS1="\[${bldred}\]>> ${EEE}"
