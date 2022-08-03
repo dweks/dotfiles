@@ -31,7 +31,7 @@ alias psu='ssh blak7@ada.cs.pdx.edu'
 # Actions
 alias rmswp='rm .*.swp .*.swo -v' # Clean Swap files
 alias leak='clear && valgrind --leak-check=full ./a.out' # Run compiled program with valgrind
-alias cmp='clear && g++ -Wall -g *.cpp *.o'
+alias cmp='g++ -Wall -g *.cpp *.o'
 alias acmp='cmp && ./a.out'
 
 # List mods
