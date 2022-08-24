@@ -41,6 +41,7 @@ fi
 if [[ $H_WHERE == $MY_HOME ]]; then
 	export SCRIPTS=~/scripts
     export PATH=${PATH}:/scripts # enable global script execution
+    source /usr/share/bash-completion/completions/git # enables autocomplete for git
 fi
 
 # Default Environmental variables
@@ -50,7 +51,6 @@ export PATH=${PATH}:/cat/bin # look in the cat bin
 export PATH=${PATH}:/.cargo/env
 export MANPATH=${MANPATH}:/cat/man # look in cat for manpages too
 export EDITOR=$(which vim) # sets vim as the standard editor
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
