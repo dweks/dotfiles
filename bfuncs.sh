@@ -1,14 +1,8 @@
 source ${DOTFILES}/bs.sh
 
-
 if [[ $H_WHERE == $MY_HOME ]]; then
-    function mk() {
-        cc $1 -lm -lX11   
-    }
-
-    function FP() {
-        newfile="${1}.c"
-        cp ../template.c ${newfile}
+    function qnot() {
+        python3 qnot.py "$@"
     }
 fi
 
@@ -18,7 +12,7 @@ function mode() {
     elif [[ $1 == "norm" ]]; then
         export PS1="\[${bldblk}\]\h: \w\n${EEE}\[${txtcyn}\]\j${EEE}\[${bldblk}\]|${EEE}\[${bldred}\]>> ${EEE}"
     elif [[ $1 == "def" ]]; then
-        export PS1="\u@\h:\W$ "
+        export PS1="\u@\h:\w$ "
     fi
 }
 
